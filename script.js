@@ -6,11 +6,13 @@ function updateVideos(pair) {
     const video = document.getElementById(method);
     video.src = `videos/${pair}/${method}.mp4`;
   });
+}
 
-  emotions.forEach(emotion => {
-    const emoVideo = document.getElementById(`rexfa_${emotion}`);
-    emoVideo.src = `videos/emotions/${emotion}.mp4`;
-});
+function populateEmotions() {
+    emotions.forEach(emotion => {
+        const emoVideo = document.getElementById(`rexfa_${emotion}`);
+        emoVideo.src = `videos/emotions/${emotion}.mp4`;
+    });
 }
 
 document.getElementById("pairSelector").addEventListener("change", (e) => {
@@ -20,4 +22,5 @@ document.getElementById("pairSelector").addEventListener("change", (e) => {
 // Load default on startup
 window.onload = () => {
   updateVideos("pair1");
+  populateEmotions();
 };
