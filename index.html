@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REXFA Comparison Demo</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>REXFA Demo: Method Comparison</h1>
+
+  <label for="pairSelector">Select Source Image + Audio Pair:</label>
+  <select id="pairSelector">
+    <option value="pair1">Pair 1</option>
+    <option value="pair2">Pair 2</option>
+    <option value="pair3">Pair 3</option>
+  </select>
+
+  <div id="videoGrid">
+    <div class="video-container"><h3>REXFA</h3><video controls id="rexfa" src="" preload="metadata"></video></div>
+    <div class="video-container"><h3>KDtalker</h3><video controls id="kdtalker" src="" preload="metadata"></video></div>
+    <div class="video-container"><h3>JoyVASA</h3><video controls id="joyvasa" src="" preload="metadata"></video></div>
+    <div class="video-container"><h3>Real3DPortrait</h3><video controls id="real3dportrait" src="" preload="metadata"></video></div>
+    <div class="video-container"><h3>SadTalker</h3><video controls id="sadtalker" src="" preload="metadata"></video></div>
+  </div>
+
+  <h2>REXFA Emotion Control</h2>
+  <div id="emotionGrid">
+    <div class="video-container"><h3>Happy</h3><video controls id="rexfa_happy" src="" preload="metadata"></video></div>
+    <div class="video-container"><h3>Sad</h3><video controls id="rexfa_sad" src="" preload="metadata"></video></div>
+    <!-- Add more emotions if needed -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
