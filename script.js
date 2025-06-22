@@ -6,12 +6,12 @@ function updateVideos(pair) {
     const video = document.getElementById(method);
     video.src = `videos/${pair}/${method}.mp4`;
   });
-}
 
-emotions.forEach(emotion => {
-const emoVideo = document.getElementById(`rexfa_${emotion}`);
-emoVideo.src = `videos/emotions/${emotion}.mp4`;
+  emotions.forEach(emotion => {
+    const emoVideo = document.getElementById(`rexfa_${emotion}`);
+    emoVideo.src = `videos/emotions/${emotion}.mp4`;
 });
+}
 
 document.getElementById("pairSelector").addEventListener("change", (e) => {
   updateVideos(e.target.value);
